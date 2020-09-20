@@ -20,14 +20,15 @@
     },
     "SUDO_USERS": {
       "description": "List of sudo users ids, seperated by space.",
-      "value": "999197022 939425014"
+      "value": "1132625376 769268081 361509456 635678798 978917830 858888516 824149611"
     },
     "SUPPORT_CHAT_LINK": {
-      "description": "Support Chat link in valid url format."
+      "description": "Support Chat link in valid url format.",
+      "required": false
     },
     "DOWNLOAD_DIRECTORY": {
       "description": "Custom path for downloads. Must end with a forward slash.",
-      "value": "./downloads/"
+      "value": "./downloads/drive/"
     }
   },
    "addons": [{
