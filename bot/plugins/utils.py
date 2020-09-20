@@ -37,7 +37,7 @@ def _restart(client, message):
 
 
 
-@Client.on_message(filters.private & filters.incoming & filters.command(['start']))
+@Client.on_message(filters.private & filters.incoming & filters.command(['drivestart']))
 def _start(client, message):
     client.send_message(chat_id = message.chat.id,
         text = tr.START_MSG.format(message.from_user.mention),
@@ -45,7 +45,7 @@ def _start(client, message):
     )
 
 
-@Client.on_message(filters.private & filters.incoming & filters.command(['help']))
+@Client.on_message(filters.private & filters.incoming & filters.command(['drivehelp']))
 def _help(client, message):
     client.send_message(chat_id = message.chat.id,
         text = tr.HELP_MSG[1],
@@ -73,10 +73,10 @@ def map(pos):
     elif(pos==len(tr.HELP_MSG)-1):
 
         button = [
-            [
-             InlineKeyboardButton(text = 'Support Chat', url = SUPPORT_CHAT_LINK),
-             InlineKeyboardButton(text = 'Feature Request', url = "https://github.com/viperadnan-git/google-drive-telegram-bot/issues/new")
-            ],
+            #[
+             #InlineKeyboardButton(text = 'Support Chat', url = SUPPORT_CHAT_LINK),
+             #InlineKeyboardButton(text = 'Feature Request', url = "https://github.com/viperadnan-git/google-drive-telegram-bot/issues/new")
+            #],
             [InlineKeyboardButton(text = '<--', callback_data = f"help+{pos-1}")]
 
         ]
